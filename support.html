@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ant — Support</title>
+    <style>
+        @font-face {
+            font-family: 'Rattless';
+            src: url('Rattless.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --sand: #EDE3D1;
+            --beige: #D9CEB9;
+            --plum: #733247;
+            --muted-plum: #8C4D61;
+            --dark-grey: #38383D;
+            --medium-grey: #6B6B70;
+            --light-grey: #9E9EA3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, var(--dark-grey), #2E2E32, #3F3840);
+            color: var(--sand);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 16px;
+            border-radius: 18px;
+        }
+
+        .app-name {
+            font-family: 'Rattless', -apple-system, sans-serif;
+            font-size: 42px;
+            color: var(--sand);
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .page-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--muted-plum);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 16px;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 15px;
+            color: var(--light-grey);
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--sand);
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--light-grey);
+            margin-bottom: 0;
+        }
+
+        p + p {
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            font-size: 15px;
+            color: var(--light-grey);
+            padding: 6px 0;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 13px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--muted-plum);
+        }
+
+        a {
+            color: var(--muted-plum);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--sand);
+            background: var(--plum);
+            border: 1px solid var(--muted-plum);
+            border-radius: 12px;
+            padding: 12px 24px;
+            margin-top: 16px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.85;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            color: var(--muted-plum);
+            margin: 0 12px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-name {
+            font-family: 'Rattless', -apple-system, sans-serif;
+            font-size: 24px;
+            color: var(--plum);
+            margin-bottom: 4px;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: var(--medium-grey);
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background: linear-gradient(135deg, var(--sand), var(--beige), #E0D9C8);
+                color: var(--dark-grey);
+            }
+
+            .app-name {
+                color: var(--dark-grey);
+            }
+
+            .card {
+                background: rgba(255, 255, 255, 0.55);
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            h2 {
+                color: var(--dark-grey);
+            }
+
+            p, ul li {
+                color: var(--medium-grey);
+            }
+
+            .intro {
+                color: var(--medium-grey);
+            }
+
+            .footer-name {
+                color: var(--plum);
+            }
+
+            .footer-text {
+                color: var(--light-grey);
+            }
+
+            .footer {
+                border-top-color: rgba(0, 0, 0, 0.08);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="anthead.png" alt="Ant" class="logo">
+            <div class="app-name">Ant</div>
+            <div class="page-title">Support</div>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+        </div>
+
+        <p class="intro">Need help with Ant? Check below for common topics or reach out directly.</p>
+
+        <div class="card">
+            <h2>Getting Started</h2>
+            <ul>
+                <li>Browse the <strong>Exercises</strong> tab to see 60+ pre-loaded exercises or add your own</li>
+                <li>Create a training cycle from the <strong>Cycles</strong> tab — set a name, length (1–10 weeks), and toggle auto-progression</li>
+                <li>Add sessions (workout days) and assign exercises to each one</li>
+                <li>Publish your cycle and start your first workout from the <strong>Sessions</strong> tab</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Auto-Progression</h2>
+            <p>When auto-regulate is enabled, Ant uses your logged Reps In Reserve (RIR) and post-workout feedback to recommend weight and rep adjustments for your next session. Each exercise and muscle group is tracked independently.</p>
+            <p>You can turn auto-progression off at any time in your cycle settings to train with straight sets.</p>
+        </div>
+
+        <div class="card">
+            <h2>iCloud Sync</h2>
+            <p>Ant syncs your data across all your Apple devices automatically via iCloud. Make sure iCloud is enabled in your device settings. If you experience sync delays, try opening the app on both devices and waiting a few moments.</p>
+            <p>Your data is stored in your personal iCloud account — it is never accessible to us or any third party.</p>
+        </div>
+
+        <div class="card">
+            <h2>Body Measurements</h2>
+            <p>Track weight, body fat, chest, waist, hips, arms, and more from the <strong>Body</strong> tab. Switch between metric and imperial units anytime in Settings — all values convert instantly.</p>
+        </div>
+
+        <div class="card">
+            <h2>Data Management</h2>
+            <p>Export your exercise library as a JSON file from Settings to share with friends or back up your custom exercises. Import exercises from a shared file the same way.</p>
+            <p>To delete all data, simply delete the app from your device. If iCloud sync is enabled, remove synced data from Settings → Apple ID → iCloud → Manage Storage.</p>
+        </div>
+
+        <div class="card">
+            <h2>Frequently Asked Questions</h2>
+            <p>Ant includes a comprehensive FAQ inside the app. Open any tab, tap the gear icon to open Settings, then tap <strong>FAQ</strong> for detailed answers on cycles, sessions, exercises, RIR, deloads, and more.</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+            <h2>Contact Support</h2>
+            <p>Still need help? Send us an email and we'll get back to you as soon as possible.</p>
+            <a href="mailto:ant-workout@pm.me" class="contact-btn">Email ant-workout@pm.me</a>
+        </div>
+
+        <div class="footer">
+            <div class="footer-name">Ant</div>
+            <div class="footer-text">Ant & Ant Progression Engine by Ron Major</div>
+        </div>
+    </div>
+</body>
+</html>
